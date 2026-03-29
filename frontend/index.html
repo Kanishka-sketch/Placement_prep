@@ -2,434 +2,176 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>PlacementPrep Portal</title>
-
-<link rel="stylesheet" href="style.css">
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrepPlace Dashboard</title>
+    <link rel="stylesheet" href="page.css" />
 </head>
 
 <body>
-
-<!-- Navigation Bar -->
-
-<nav class="navbar">
-
-<div class="logo">
-<i class="fa-solid fa-graduation-cap"></i>
-PlacementPrep
-</div>
-
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="#features">Features</a></li>
-<li><a href="#how">How It Works</a></li>
-<a href="#" class="register-btn" onclick="openModal()">Login/Register</a>
-<!-- <li><a href="login.html">Login</a></li>
-<li><a href="register.html" class="register-btn">Register</a></li> -->
-</ul>
-
-</nav>
-
-
-
-<!-- Hero Section -->
-
-<section class="hero">
-
-<div class="hero-container">
-
-<div class="hero-text">
-
-<h1>Prepare for Placements the Smart Way</h1>
-
-<p>
-A simple platform to help students prepare for campus placements.
-Build your resume, test your skills with aptitude quizzes,
-and discover companies that match your abilities.
-</p>
-
-<div class="hero-buttons">
-<a href="#" class="btn-primary">Get Started</a>
-<a href="#" class="btn-secondary">Learn More</a>
-</div>
-
-</div>
-
-
-<div class="hero-image">
-
-<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="students preparing">
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- Stats Section -->
-
-<!-- <section class="stats">
-
-<div class="stat">
-<h2>5000+</h2>
-<p>Students Prepared</p>
-</div>
-
-<div class="stat">
-<h2>200+</h2>
-<p>Companies Listed</p>
-</div>
-
-<div class="stat">
-<h2>10K+</h2>
-<p>Aptitude Questions</p>
-</div>
-
-</section> -->
-
-
-
-<!-- Features Section -->
-
-<section id="features" class="features">
-
-<h2>Features Designed for Your Placement Success</h2>
-
-<div class="feature-container">
-
-
-<div class="feature-card">
-<i class="fa-solid fa-user-graduate feature-icon"></i>
-<h3>Student Profile</h3>
-<p>
-Create your profile and add your academic details,
-technical skills, and interests so the platform can guide
-you towards the right opportunities.
-</p>
-</div>
-
-
-<div class="feature-card">
-<i class="fa-solid fa-file-lines feature-icon"></i>
-<h3>Resume Builder</h3>
-<p>
-Build a professional resume easily or upload your
-existing resume to keep everything organized
-in one place.
-</p>
-</div>
-
-
-<div class="feature-card">
-<i class="fa-solid fa-brain feature-icon"></i>
-<h3>Aptitude Practice</h3>
-<p>
-Practice aptitude questions regularly and track your
-performance to understand where you need improvement.
-</p>
-</div>
-
-
-<div class="feature-card">
-<i class="fa-solid fa-building feature-icon"></i>
-<h3>Company Suggestions</h3>
-<p>
-Based on your skills and profile, get suggestions for
-companies and roles that might suit you best.
-</p>
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- How it Works -->
-
-<section id="how" class="how-it-works">
-
-<h2>How It Works</h2>
-
-<div class="steps">
-
-<div class="step">
-<h3>1. Create Your Profile</h3>
-<p>Register and tell us about your skills, interests and academic background.</p>
-</div>
-
-<div class="step">
-<h3>2. Upload or Build Resume</h3>
-<p>Create a clean resume or upload your existing one.</p>
-</div>
-
-<div class="step">
-<h3>3. Practice Aptitude</h3>
-<p>Take quizzes and strengthen your problem solving ability.</p>
-</div>
-
-<div class="step">
-<h3>4. Discover Opportunities</h3>
-<p>Explore company suggestions and prepare for interviews confidently.</p>
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- Call To Action -->
-
-<section class="cta">
-
-<h2>Start Your Placement Preparation Today</h2>
-
-<p>
-Take small steps every day towards your dream job.
-Build your profile and start practicing now.
-</p>
-
-<a href="#" class="btn-primary">Create Your Account</a>
-
-</section>
-
-
-
-<!-- Footer -->
-
-<!-- <footer class="footer">
-
-<div class="footer-content">
-
-<div class="footer-logo">
-<i class="fa-solid fa-graduation-cap"></i>
-PlacementPrep
-</div>
-
-<p>Helping students prepare for campus placements efficiently.</p>
-
-<div class="footer-links">
-<a href="#">Privacy Policy</a>
-<a href="#">Contact</a>
-<a href="#">Support</a>
-</div>
-
-</div>
-
-<p class="copyright">
-© 2026 PlacementPrep Portal
-</p>
-
-
-
-
-<!-- AUTH MODAL -->
-
-<div id="authModal" class="modal">
-
-<div class="modal-content">
-
-<span class="close-btn" onclick="closeModal()">&times;</span>
-
-<div class="auth-container">
-
-
-<!-- LEFT PANEL -->
-
-<div class="auth-info">
-
-<h2>Welcome to PlacementPrep</h2>
-
-<p>
-Build your resume, practice aptitude,
-and discover companies that match your profile.
-</p>
-
-<ul>
-<li>📄 Resume Builder</li>
-<li>🧠 Aptitude Practice</li>
-<li>🏢 Company Recommendations</li>
-<li>📊 Skill Improvement</li>
-</ul>
-
-</div>
-
-
-<!-- RIGHT PANEL -->
-
-<div class="auth-form">
-
-<div class="auth-toggle">
-
-<button id="loginTab" class="active">Login</button>
-<button id="registerTab">Register</button>
-
-</div>
-
-
-<!-- LOGIN -->
-
-<form id="loginForm" class="active">
-
-<input type="email" placeholder="Email Address" required>
-
-<div class="password-field">
-<input type="password" id="loginPassword" placeholder="Password" required>
-<span onclick="togglePassword('loginPassword')">👁</span>
-</div>
-
-<button class="btn-primary full-btn">Login</button>
-
-<p class="switch-text">
-Don't have an account?
-<span id="switchToRegister">Register</span>
-</p>
-
-</form>
-
-
-<!-- REGISTER -->
-
-<form id="registerForm">
-
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email Address" required>
-
-<div class="password-field">
-<input type="password" id="registerPassword" placeholder="Create Password" required onkeyup="checkPasswordStrength()">
-<span onclick="togglePassword('registerPassword')">👁</span>
-</div>
-
-<div id="password-strength"></div>
-
-<select required>
-<option value="">Select Branch</option>
-<option>Computer Science</option>
-<option>IT</option>
-<option>Electronics</option>
-<option>Mechanical</option>
-</select>
-
-<input type="number" placeholder="Graduation Year (e.g., 2026)" min="2005" max="2035" required>
-
-<button class="btn-primary full-btn">Create Account</button>
-
-<p class="switch-text">
-Already have an account?
-<span id="switchToLogin">Login</span>
-</p>
-
-</form>
-
-</div>
-
-</div>
-
-</div>
-</div>
-<!-- </footer> --> 
-
-<footer class="footer">
-
-<p>© 2026 PlacementPrep Portal | Built for students preparing for placements</p>
-
-</footer>
-
-<script>
-
-/* Modal */
-
-function openModal(){
-document.getElementById("authModal").style.display="flex"
-}
-
-function closeModal(){
-document.getElementById("authModal").style.display="none"
-}
-
-/* Toggle */
-
-const loginTab = document.getElementById("loginTab")
-const registerTab = document.getElementById("registerTab")
-
-const loginForm = document.getElementById("loginForm")
-const registerForm = document.getElementById("registerForm")
-
-const switchToRegister = document.getElementById("switchToRegister")
-const switchToLogin = document.getElementById("switchToLogin")
-
-loginTab.onclick = showLogin
-registerTab.onclick = showRegister
-switchToRegister.onclick = showRegister
-switchToLogin.onclick = showLogin
-
-function showLogin(){
-loginForm.classList.add("active")
-registerForm.classList.remove("active")
-loginTab.classList.add("active")
-registerTab.classList.remove("active")
-}
-
-function showRegister(){
-registerForm.classList.add("active")
-loginForm.classList.remove("active")
-registerTab.classList.add("active")
-loginTab.classList.remove("active")
-}
-
-/* Password Toggle */
-
-function togglePassword(id){
-let input=document.getElementById(id)
-input.type = input.type==="password" ? "text" : "password"
-}
-
-/* Password Strength */
-
-function checkPasswordStrength(){
-
-let password = document.getElementById("registerPassword").value
-let strengthText = document.getElementById("password-strength")
-
-let strength = 0
-
-if(password.length >= 6) strength++
-if(/[a-zA-Z]/.test(password)) strength++
-if(/[0-9]/.test(password)) strength++
-if(/[@$!%*?&]/.test(password)) strength++
-
-if(password.length === 0){
-strengthText.innerHTML=""
-}
-else if(strength <= 1){
-strengthText.innerHTML="Weak Password"
-strengthText.className="weak"
-}
-else if(strength <= 3){
-strengthText.innerHTML="Medium Password"
-strengthText.className="medium"
-}
-else{
-strengthText.innerHTML="Strong Password"
-strengthText.className="strong"
-}
-
-}
+    <header>
+        <nav class="navbar">
+            <div class="logo">PrepPlace</div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="quiz.html">Quiz / Assessment</a></li>
+            </ul>
+        <div class="nav-btn">
+            <button onclick="logout()" class="btn">Logout</button>
+        </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+               <h1 id="welcomeText">Welcome back 👋</h1>
+                <p>
+                    Keep building your skills, track your progress, improve your resume,
+                    and get one step closer to your dream placement.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="primary-btn">Start Assessment</a>
+                    <a href="#" class="secondary-btn">View Resume</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <h3>Your Progress Snapshot</h3>
+                <div class="stat-box">
+                    <span>Skills Improved</span>
+                    <strong>12</strong>
+                </div>
+                <div class="stat-box">
+                    <span>Quizzes Completed</span>
+                    <strong>08</strong>
+                </div>
+                <div class="stat-box">
+                    <span>Resume Score</span>
+                    <strong>85%</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Everything you need, all in one place</h2>
+            <p class="section-text">
+                A smart and simple space to prepare, practice, and grow with confidence.
+            </p>
+
+            <div class="feature-grid">
+                <div class="card">
+                    <h3>📊 Dashboard</h3>
+                    <p>
+                        Get a quick overview of your progress, recent activity, and performance trends.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>👤 Profile</h3>
+                    <p>
+                        Keep your academic details, skills, and achievements updated in one place.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>📄 Resume</h3>
+                    <p>
+                        Build and refine your resume so it reflects your strengths clearly and professionally.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🧠 Quiz / Assessment</h3>
+                    <p>
+                        Practice aptitude, technical, and logical questions to sharpen your preparation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <div class="progress-card">
+                <h3>Your Skill Progress</h3>
+
+                <div class="progress-item">
+                    <label>HTML & CSS</label>
+                    <div class="progress-bar">
+                        <div class="progress fill1"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>JavaScript</label>
+                    <div class="progress-bar">
+                        <div class="progress fill2"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>Aptitude</label>
+                    <div class="progress-bar">
+                        <div class="progress fill3"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>DSA</label>
+                    <div class="progress-bar">
+                        <div class="progress fill4"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <h3>Recent Activity</h3>
+                <ul>
+                    <li>✅ Completed JavaScript Basics Quiz</li>
+                    <li>📄 Updated Resume Headline</li>
+                    <li>🎯 Added 2 new technical skills</li>
+                    <li>📈 Improved Aptitude Score by 10%</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="motivation">
+            <h2>Small progress is still progress 🌱</h2>
+            <p>
+                Every quiz you attempt, every skill you improve, and every update you make
+                to your profile brings you closer to your goal. Stay consistent — you’re doing better than you think.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 PrepPlace | Built to support your placement journey</p>
+    </footer>
+
+   <script>
+
+    function logout() {
+        localStorage.removeItem("user")
+        window.location.href = "index.html"
+    }
+
+    // ✅ Get user properly (convert from string → object)
+    const user = JSON.parse(localStorage.getItem("user"))
+
+    // ✅ Protect page
+    if (!user) {
+        window.location.href = "index.html"
+    }
+
+    // ✅ Show user name (if element exists)
+    const welcome = document.getElementById("welcomeText")
+
+    if (welcome && user) {
+        welcome.innerText = `Welcome back, ${user.name} 👋`
+    }
 
 </script>
-
 </body>
+
 </html>
