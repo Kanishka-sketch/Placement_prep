@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="nav.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">PrepPlace</div>
+
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="quiz.html">Quiz / Assessment</a></li>
+        </ul>
+    </nav>
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <h2>PrepPlace</h2>
+                <p>Your placement companion</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Profile</a>
+                <a href="#">Resume</a>
+                <a href="#">Quiz / Assessment</a>
+            </nav>
+
+            <div class="sidebar-card">
+                <h4>Daily Reminder</h4>
+                <p>Even a small step today brings you closer to your goal.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Top Header -->
+            <header class="topbar">
+                <div>
+                    <h1 id="welcomeText">Welcome back 👋</h1>
+                    <p>Here’s a quick look at your preparation journey today.</p>
+                </div>
+
+                <div class="user-badge">
+                    <span class="dot"></span>
+                    Active Today
+                </div>
+            </header>
+
+            <!-- Overview Cards -->
+            <section class="overview-grid">
+                <div class="overview-card card-blue">
+                    <h3>Profile Completion</h3>
+                    <div class="big-number">78%</div>
+                    <p>Your profile looks good — just a few details left to make it stronger.</p>
+                    <div class="mini-progress">
+                        <div class="mini-fill fill-78"></div>
+                    </div>
+                </div>
+
+                <div class="overview-card card-green">
+                    <h3>Latest Quiz Score</h3>
+                    <div class="big-number">82 / 100</div>
+                    <p>Nice work! Your logical reasoning performance is improving steadily.</p>
+                </div>
+
+                <div class="overview-card card-purple">
+                    <h3>Resume Strength</h3>
+                    <div class="big-number">Good</div>
+                    <p>Your resume has strong basics, but adding projects can improve impact.</p>
+                </div>
+
+                <div class="overview-card card-peach">
+                    <h3>Focus Area</h3>
+                    <div class="big-number">JavaScript</div>
+                    <p>This skill could boost your profile for frontend and full stack roles.</p>
+                </div>
+            </section>
+
+            <!-- Dashboard Middle Section -->
+            <section class="content-grid">
+
+                <!-- Left Column -->
+                <div class="left-column">
+
+                    <!-- Profile Status -->
+                    <div class="panel">
+                        <div class="panel-header">
+                            <h2>Profile Status</h2>
+                            <a href="#" class="text-link">Complete Profile</a>
+                        </div>
+
+                        <div class="status-list">
+                            <div class="status-item">
+                                <div class="status-text">
+                                    <h4>Basic Information</h4>
+                                    <p>Name, email, course and graduation details added</p>
+                                </div>
+                                <span class="status done">Done</span>
+                            </div>
+
+                            <div class="status-item">
+                                <div class="status-text">
+                                    <h4>Skills Section</h4>
+                                    <p>You’ve added technical skills, but can still include tools and frameworks</p>
+                                </div>
+                                <span class="status progress">In Progress</span>
+                            </div>
+
+                            <div class="status-item">
+                                <div class="status-text">
+                                    <h4>Projects & Achievements</h4>
+                                    <p>This section is missing and can make your profile more impressive</p>
+                                </div>
+                                <span class="status pending">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resume Upload -->
+                    <div class="panel">
+                        <div class="panel-header">
+                            <h2>Resume Upload</h2>
+                            <a href="#" class="text-link">View Resume Tips</a>
+                        </div>
+
+                        <div class="resume-box">
+                            <div class="upload-icon">📄</div>
+                            <h3>Upload your latest resume</h3>
+                            <p>
+                                Keep your resume updated so we can suggest better skills,
+                                quizzes, and relevant opportunities for you.
+                            </p>
+
+                            <div class="upload-actions">
+                                <input type="file" id="resumeUpload" hidden />
+                                <label for="resumeUpload" class="upload-btn">Choose File</label>
+                                <button class="secondary-btn">Analyze Resume</button>
+                            </div>
+
+                            <p class="file-note">Accepted formats: PDF, DOC, DOCX</p>
+                        </div>
+                    </div>
+
+                    <!-- Skill Suggestions -->
+                    <div class="panel">
+                        <div class="panel-header">
+                            <h2>Skill Suggestions Based on Resume</h2>
+                            <a href="#" class="text-link">Why these skills?</a>
+                        </div>
+
+                        <p class="panel-intro">
+                            Based on your current resume, these are the areas that can make your profile stronger and
+                            more job-ready.
+                        </p>
+
+                        <div class="suggestion-list">
+                            <div class="suggestion-card">
+                                <div class="suggestion-top">
+                                    <h4>JavaScript</h4>
+                                    <span class="priority high">High Priority</span>
+                                </div>
+                                <p>
+                                    Since your profile already includes HTML and CSS, JavaScript is the next natural
+                                    step
+                                    to build complete interactive web projects.
+                                </p>
+                            </div>
+
+                            <div class="suggestion-card">
+                                <div class="suggestion-top">
+                                    <h4>React.js</h4>
+                                    <span class="priority medium">Recommended</span>
+                                </div>
+                                <p>
+                                    Learning React can help you create modern frontend applications and improve your
+                                    placement profile.
+                                </p>
+                            </div>
+
+                            <div class="suggestion-card">
+                                <div class="suggestion-top">
+                                    <h4>SQL / Database Handling</h4>
+                                    <span class="priority medium">Recommended</span>
+                                </div>
+                                <p>
+                                    Adding database knowledge makes your projects more complete and shows backend
+                                    understanding.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="right-column">
+
+                    <!-- Quiz Score -->
+                    <div class="panel score-panel">
+                        <div class="panel-header">
+                            <h2>Quiz Performance</h2>
+                            <a href="#" class="text-link">Take New Quiz</a>
+                        </div>
+
+                        <div class="score-circle-wrap">
+                            <div class="score-circle">
+                                <div class="score-inner">
+                                    <span>82%</span>
+                                    <small>Overall Score</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="score-breakdown">
+                            <div class="breakdown-item">
+                                <span>Aptitude</span>
+                                <strong>76%</strong>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Logical Reasoning</span>
+                                <strong>88%</strong>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Technical Basics</span>
+                                <strong>82%</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Growth Suggestion -->
+                    <div class="panel">
+                        <div class="panel-header">
+                            <h2>Friendly Suggestion</h2>
+                        </div>
+
+                        <div class="advice-box">
+                            <p>
+                                You’re doing well in reasoning and basic technical sections. To improve your overall
+                                placement readiness,
+                                try focusing a little more on <strong>JavaScript practice</strong> and <strong>project
+                                    building</strong>.
+                            </p>
+                            <button class="primary-btn">View Learning Plan</button>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="panel">
+                        <div class="panel-header">
+                            <h2>Quick Actions</h2>
+                        </div>
+
+                        <div class="quick-actions">
+                            <button>Update Profile</button>
+                            <button>Upload Resume</button>
+                            <button>Start Mock Quiz</button>
+                            <button>View Suggestions</button>
+                        </div>
+                    </div>
+
+                    <!-- Motivation -->
+                    <div class="panel motivation-panel">
+                        <h2>Keep Going 🌱</h2>
+                        <p>
+                            Your progress does not have to be perfect to be meaningful.
+                            Stay consistent, keep learning, and let each small improvement build your confidence.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+
+        function logout() {
+            localStorage.removeItem("user")
+            window.location.href = "index.html"
+        }
+
+        // ✅ Get user properly (convert from string → object)
+        const user = JSON.parse(localStorage.getItem("user"))
+
+        // ✅ Protect page
+        if (!user) {
+            window.location.href = "index.html"
+        }
+
+        // ✅ Show user name (if element exists)
+        const welcome = document.getElementById("welcomeText")
+
+        if (welcome && user) {
+            welcome.innerText = `Welcome back, ${user.name} 👋`
+        }
+
+    </script>
+</body>
+
+</html>
