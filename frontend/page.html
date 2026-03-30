@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrepPlace Dashboard</title>
+    <link rel="stylesheet" href="page.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">PrepPlace</div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="quiz.html">Quiz / Assessment</a></li>
+            </ul>
+        <div class="nav-btn">
+            <button onclick="logout()" class="btn">Logout</button>
+        </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+               <h1 id="welcomeText">Welcome back 👋</h1>
+                <p>
+                    Keep building your skills, track your progress, improve your resume,
+                    and get one step closer to your dream placement.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="primary-btn">Start Assessment</a>
+                    <a href="#" class="secondary-btn">View Resume</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <h3>Your Progress Snapshot</h3>
+                <div class="stat-box">
+                    <span>Skills Improved</span>
+                    <strong>12</strong>
+                </div>
+                <div class="stat-box">
+                    <span>Quizzes Completed</span>
+                    <strong>08</strong>
+                </div>
+                <div class="stat-box">
+                    <span>Resume Score</span>
+                    <strong>85%</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Everything you need, all in one place</h2>
+            <p class="section-text">
+                A smart and simple space to prepare, practice, and grow with confidence.
+            </p>
+
+            <div class="feature-grid">
+                <div class="card">
+                    <h3>📊 Dashboard</h3>
+                    <p>
+                        Get a quick overview of your progress, recent activity, and performance trends.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>👤 Profile</h3>
+                    <p>
+                        Keep your academic details, skills, and achievements updated in one place.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>📄 Resume</h3>
+                    <p>
+                        Build and refine your resume so it reflects your strengths clearly and professionally.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🧠 Quiz / Assessment</h3>
+                    <p>
+                        Practice aptitude, technical, and logical questions to sharpen your preparation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <div class="progress-card">
+                <h3>Your Skill Progress</h3>
+
+                <div class="progress-item">
+                    <label>HTML & CSS</label>
+                    <div class="progress-bar">
+                        <div class="progress fill1"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>JavaScript</label>
+                    <div class="progress-bar">
+                        <div class="progress fill2"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>Aptitude</label>
+                    <div class="progress-bar">
+                        <div class="progress fill3"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>DSA</label>
+                    <div class="progress-bar">
+                        <div class="progress fill4"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <h3>Recent Activity</h3>
+                <ul>
+                    <li>✅ Completed JavaScript Basics Quiz</li>
+                    <li>📄 Updated Resume Headline</li>
+                    <li>🎯 Added 2 new technical skills</li>
+                    <li>📈 Improved Aptitude Score by 10%</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="motivation">
+            <h2>Small progress is still progress 🌱</h2>
+            <p>
+                Every quiz you attempt, every skill you improve, and every update you make
+                to your profile brings you closer to your goal. Stay consistent — you’re doing better than you think.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 PrepPlace | Built to support your placement journey</p>
+    </footer>
+
+   <script>
+
+    function logout() {
+        localStorage.removeItem("user")
+        window.location.href = "index.html"
+    }
+
+    // ✅ Get user properly (convert from string → object)
+    const user = JSON.parse(localStorage.getItem("user"))
+
+    // ✅ Protect page
+    if (!user) {
+        window.location.href = "index.html"
+    }
+
+    // ✅ Show user name (if element exists)
+    const welcome = document.getElementById("welcomeText")
+
+    if (welcome && user) {
+        welcome.innerText = `Welcome back, ${user.name} 👋`
+    }
+
+</script>
+</body>
+
+</html>
